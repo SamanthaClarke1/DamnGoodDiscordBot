@@ -94,4 +94,4 @@
     + ##splicecache [start] [elementsToDelete] // runs a javascript array.splice command on the cache. 
     + // ##splicecache 0 1 // deletes the first element
 + Dice usage
-    + ##dice // ...
+    + ##dice [max number] // generates a number from 1 to max number
