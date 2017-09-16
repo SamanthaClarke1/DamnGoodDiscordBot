@@ -42,6 +42,7 @@ var gameMaster = "";
 var blanks = "";
 
 var isYeeting = false;
+var owner = "KingTide";
 var altadmins = ["KingTide", "KingTide44"];
 var subadmins = ["I Want to Jiro-verdose and Die", "IsntThatSwell"]
 
@@ -60,7 +61,9 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if(!lchannel) lchannel = message.channel;
-
+	else if(message.author.username == owner && message.content == "##summon") {
+		lchannel = message.channel;
+	}
     var xx = message.content.split(' ')[0].toLowerCase();
     var params = message.content.split(' ');
     params.splice(0, 1);
@@ -500,13 +503,11 @@ cache: stores the string you give it
         message.reply('hehehe...');
     }
     if(commandIs('idontcare', message) && isAdmin(message.author.username)) {
-        for(var i = 0; i < params.length; i++) {
-            blockedUsers.push(params[i]);
-        }
+        blockedUsers.push(params.join(" "));
     }
     if(commandIs('icarenow', message) && isAdmin(message.author.username)) {
         for(var i = 0; i < blockedUsers.length; i++) {
-            if(blockedUsers[i] == params[0]) {
+            if(blockedUsers[i] == params.join(" ")) {
                 blockedUsers.splice(i, 1);
             }
         }
