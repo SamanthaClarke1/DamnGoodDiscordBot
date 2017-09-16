@@ -1,6 +1,9 @@
-# DamnGoodDiscordBot
+# **DamnGoodDiscordBot**
 #### (Its actually trash lmao)
 
+## **Owner**
++ ##summon // sets the bots default messaging channel to that channel.
++ All other commands
 
 ## **Admins**
 
